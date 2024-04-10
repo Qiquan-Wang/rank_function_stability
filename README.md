@@ -12,16 +12,13 @@ We explore the persistent homology rank functions as equivalent functional repre
 <!-- Structure of the repository -->
 ## Structure of the repository
 This repository is split into the following:
-- `HRV_Application`: contains code and data related to the application of classifying HRV between healthy individuals and post-stroke patients in Section 3.1 of the paper.
-    -  `Classification on HRV data.ipynb`: notebook to reproduce all figures and results from Section 3.1.
+- `HRV_Application`: contains code and data related to the application of classifying HRV between healthy individuals and post-stroke patients in Section 4.2 of the paper.
+    -  `Classification on HRV data.ipynb`: notebook to reproduce all figures and results from Section 4.2 in classification using rank functions.
     -  `Classification of HRV data with persistence images.ipynb`: notebook to reproduce results for classification using persistence images
-    -  `interpolatedRR_CON.csv` and `normalRRs_CON.csv` are the data required.
+    -  `interpolatedRR_CON.csv` and `normalRRs_CON.csv` are the HRV data required.
 - `Compute_Biparameter_Rank_Invariant`: contains Python scripts for computing biparameter rank invariants (which are adapted from the original code for computing multiparameter persistence landscapes found [here](https://github.com/OliverVipond/Multiparameter_Persistence_Landscapes/tree/master))
-- `Simulation_Study`: contains code for simulation study found in Section 3.2
-    - `Simulation.ipynb`: notebook to reproduce all figures and results from Section 3.2.
-    - `simulation_tools.py` and `compute_rank_function_from_barcode.py` contain supplementary code for the notebook
-- `Lung_CT_Application`: contains code and data related to the application of classifying states of lung tumours from MRIs found in Section 3.3 of the paper.
-    - `Application in Lung Tumour Classification.ipynb`, `dcm to point clouds to rank functions.ipynb` and `For visualization.ipynb` are notebooks to reproduce all figures and results from Section 3.3. More explanations can be found within the notebooks.
+- `Lung_CT_Application`: contains code and data related to the application of classifying states of lung tumours from MRIs found in Section 5.2 of the paper.
+    - `Application in Lung Tumour Classification.ipynb`, `dcm to point clouds to rank functions.ipynb` and `For visualization.ipynb` are notebooks to reproduce all figures and results from Section 5.2. More explanations can be found within the notebooks.
     - `Diagnosis.csv`: contains lung tumour diagnosis
     - `Meta.csv`: contains lung tumour MRI information including whether images contain contrasting material
     - `masks`: contains tumour segmented masks.
@@ -61,6 +58,7 @@ We require from python the following packages:
 - [random](https://docs.python.org/3/library/random.html)
 - [ripser](https://ripser.scikit-tda.org/en/latest/)
 - [persim](https://persim.scikit-tda.org/en/latest/)
+- [sklearn](https://scikit-learn.org/stable/)
 
 ### RIVET 
 [RIVET](https://rivet.readthedocs.io/en/latest/) is a tool for computing two-parameter persistent homology and we provide code to compute the rank invariants from the RIVET outputs in the folder Compute_Biparameter_Rank_Invariant.
